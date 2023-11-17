@@ -8,8 +8,8 @@
 		"strict": true
 	},
 	"exclude": [
-		"mod.ts",
-		"deno",
+		"./mod.ts",
+		"./deno",
 		"node_modules",
 		"dist",
 	]

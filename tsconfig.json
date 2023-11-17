@@ -7,7 +7,6 @@
 		"strict": true
 	},
 	"exclude": [
-		"mod.ts",
-		"lib/server.deno.ts"
+		"deno"
 	]
 }

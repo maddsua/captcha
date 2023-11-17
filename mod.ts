@@ -1,4 +1,4 @@
-import { validateReCaptcha } from "./lib/server.deno.ts";
+import { validateReCaptcha } from "./deno/server.ts";
 
 export {
 	validateReCaptcha

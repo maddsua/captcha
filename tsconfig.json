@@ -2,11 +2,15 @@
 	"compilerOptions": {
 		"lib": ["DOM", "ESNext"],
 		"target": "ES6",
+		"rootDir": "lib",
 		"outDir": "dist",
 		"declaration": true,
 		"strict": true
 	},
 	"exclude": [
-		"deno"
+		"mod.ts",
+		"deno",
+		"node_modules",
+		"dist",
 	]
 }

@@ -1,0 +1,17 @@
+{
+	"name": "@maddsua/captcha",
+	"description": "recaptcha typescript lib",
+	"version": "4.0.0",
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"dev-dependencies": {
+		"typescript": "^5.2.2"
+	},
+	"files": [
+		"dist"
+	]
+}

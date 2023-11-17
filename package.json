@@ -1,10 +1,10 @@
 {
 	"name": "@maddsua/captcha",
 	"description": "recaptcha typescript lib",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"license": "MIT",
-	"main": "./dist/client.d.js",
-	"types": "./dist/client.d.d.ts",
+	"main": "./dist/client.js",
+	"types": "./dist/client.d.ts",
 	"scripts": {
 		"build": "tsc"
 	},

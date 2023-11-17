@@ -3,8 +3,8 @@
 	"description": "recaptcha typescript lib",
 	"version": "4.0.0",
 	"license": "MIT",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./dist/client.d.js",
+	"types": "./dist/client.d.d.ts",
 	"scripts": {
 		"build": "tsc"
 	},

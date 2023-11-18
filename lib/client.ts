@@ -44,21 +44,14 @@ export const loadReCaptcha = (options: LoadOptions) => {
 interface ExecuteV3Options {
 	action?: string;
 }
-export const executeReCaptchaV3 = (secretKey: string, options?: ExecuteV3Options) => new Promise<string | null>(async (resolve) => {
+export const executeReCaptchaV3 = (secretKey: string, options?: ExecuteV3Options) => new Promise<string>(async (resolve, reject) => {
 
 	while (!window.grecaptcha?.ready) {
 		console.warn('Waiting for recaptcha...');
 		await new Promise<void>(resolve => setTimeout(resolve, 1000));
 	}
 
-	const executeOptions = {
+	window.grecaptcha.ready(() => window.grecaptcha!.execute(secretKey, {
 		action: options?.action || 'submit'
-	};
-
-	const execute = () => window.grecaptcha!.execute(secretKey, executeOptions).then(token => resolve(token)).catch(error => {
-		console.error('reCAPTCHA error:', error);
-		resolve(null);
-	});
-
-	window.grecaptcha.ready(execute);
+	}).then(resolve).catch(reject));
 });

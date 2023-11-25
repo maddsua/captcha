@@ -1,5 +1,5 @@
 {
-	"name": "@maddsua/captcha",
+	"name": "@maddsua/captcha-client",
 	"description": "recaptcha typescript lib",
 	"version": "4.1.0",
 	"license": "MIT",

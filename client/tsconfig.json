@@ -2,14 +2,12 @@
 	"compilerOptions": {
 		"lib": ["DOM", "ESNext"],
 		"target": "ES2017",
-		"rootDir": "lib",
+		"rootDir": "client/lib",
 		"outDir": "dist",
 		"declaration": true,
 		"strict": true
 	},
 	"exclude": [
-		"./mod.ts",
-		"./deno",
 		"node_modules",
 		"dist",
 	]

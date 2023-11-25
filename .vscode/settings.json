@@ -2,7 +2,7 @@
 	"deno.enable": true,
 	"deno.lint": false,
 	"deno.enablePaths": [
-		"deno",
-		"mod.ts"
+		"server/deno",
+		"server/mod.ts"
 	]
 }

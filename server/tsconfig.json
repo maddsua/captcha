@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"lib": ["ES6", "DOM", "ESNext"],
+		"target": "ES2017",
+		"rootDir": "lib",
+		"outDir": "dist",
+		"declaration": true,
+		"strict": true
+	},
+	"exclude": [
+		"mod.ts",
+		"node_modules",
+		"dist",
+	]
+}

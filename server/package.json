@@ -1,0 +1,20 @@
+{
+	"name": "@maddsua/captcha-server",
+	"description": "server-side stuff to validate CAPTCHAs",
+	"version": "4.2.0",
+	"license": "MIT",
+	"main": "./dist/server.js",
+	"types": "./dist/server.d.ts",
+	"engines" : { 
+		"node" : ">=18.0.0"
+	},
+	"scripts": {
+		"build": "tsc"
+	},
+	"dev-dependencies": {
+		"typescript": "^5.2.2"
+	},
+	"files": [
+		"dist"
+	]
+}

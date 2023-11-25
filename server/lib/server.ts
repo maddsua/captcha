@@ -25,8 +25,10 @@ interface APIResponse {
  */
 export const validateReCaptcha = async (params: ValidationParams): Promise<ValidationResult> => {
 
-	if (typeof params.challenge !== 'string')
-		return { success : false, error: new Error('challenge token invalid') };
+	if (typeof params.challenge !== 'string') return {
+		success : false,
+		error: new Error('challenge token invalid')
+	};
 
 	const requestPayload = new URLSearchParams();
 	requestPayload.set('secret', params.secretKey);
@@ -46,9 +48,15 @@ export const validateReCaptcha = async (params: ValidationParams): Promise<Valid
 			throw new Error(`score too low (${result.score})`);
 		}
 
-		return { success: true, score: result.score };
+		return {
+			success: true,
+			score: result.score
+		};
 		
 	} catch (error) {
-		return { success: false, error };
+		return {
+			success: false,
+			error: error instanceof Error ? error : new Error(JSON.stringify(error))
+		};
 	}	
 };

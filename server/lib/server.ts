@@ -34,6 +34,8 @@ export const validateReCaptcha = async (params: ValidationParams): Promise<Valid
 	requestPayload.set('secret', params.secretKey);
 	requestPayload.set('response', params.challenge);
 
+	const scoreThreshold = params.minScore || 0.5;
+
 	try {
 
 		const result: APIResponse = await (await fetch('https://google.com/recaptcha/api/siteverify', {
@@ -44,8 +46,8 @@ export const validateReCaptcha = async (params: ValidationParams): Promise<Valid
 
 		if (!result.success) throw new Error(result['error-codes']?.join(', '));
 
-		if (result.score && result.score < (params.minScore || 0.5)) {
-			throw new Error(`score too low (${result.score})`);
+		if (result.score && result.score < scoreThreshold) {
+			throw new Error(`Score too low (${result.score}/${scoreThreshold})`);
 		}
 
 		return {

@@ -34,7 +34,6 @@ export const validateReCaptcha = async (params: ValidationParams): Promise<Valid
 	requestPayload.set('secret', params.secretKey);
 	requestPayload.set('response', params.challenge);
 
-	
 	try {
 
 		const scoreThreshold = (typeof params.minScore === 'string' ? parseFloat(params.minScore) : params.minScore) || 0.5;

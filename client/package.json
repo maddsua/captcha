@@ -1,8 +1,9 @@
 {
 	"name": "@maddsua/captcha-client",
 	"description": "recaptcha typescript lib",
-	"version": "4.2.1",
+	"version": "4.2.2",
 	"license": "MIT",
+	"type": "module",
 	"main": "./dist/client.js",
 	"types": "./dist/client.d.ts",
 	"scripts": {

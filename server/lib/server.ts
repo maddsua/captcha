@@ -2,7 +2,7 @@
 type ValidationParams = {
 	secretKey: string;
 	challenge: string;
-	minScore?: number;
+	minScore?: string | number;
 };
 
 type ValidationResult = {
@@ -34,9 +34,10 @@ export const validateReCaptcha = async (params: ValidationParams): Promise<Valid
 	requestPayload.set('secret', params.secretKey);
 	requestPayload.set('response', params.challenge);
 
-	const scoreThreshold = params.minScore || 0.5;
-
+	
 	try {
+
+		const scoreThreshold = (typeof params.minScore === 'string' ? parseFloat(params.minScore) : params.minScore) || 0.5;
 
 		const result: APIResponse = await (await fetch('https://google.com/recaptcha/api/siteverify', {
 			method: 'POST',

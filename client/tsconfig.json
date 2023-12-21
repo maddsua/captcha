@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"lib": ["DOM", "ESNext"],
-		"target": "ESNext",
+		"target": "ES2017",
 		"rootDir": "lib",
 		"outDir": "dist",
 		"declaration": true,
